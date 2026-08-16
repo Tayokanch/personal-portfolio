@@ -1,5 +1,4 @@
-import bannerImage from '../assets/gis-banner1.webp';
-//import bannerImage from '../assets/gis-banner3.jpg';
+import bannerImage from '../assets/gis-banner4.webp';
 import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 
@@ -20,16 +19,16 @@ function ContactItem({ item }) {
 
 function HomePage() {
   return (
-    <section id="home" className="relative isolate min-h-screen overflow-hidden bg-slate-950 bg-cover bg-center pt-20 text-white" style={{ backgroundImage: `url(${bannerImage})` }}>
+    <section id="home" className="portfolio-home relative isolate min-h-screen overflow-hidden bg-cover bg-center pt-20" style={{ backgroundImage: `url(${bannerImage})` }}>
       <div className="absolute inset-0 -z-10 bg-slate-950/50" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(2,6,23,0.9)_0%,rgba(2,6,23,0.7)_45%,rgba(2,6,23,0.3)_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_35%,rgba(144,224,239,0.08),transparent_35%)]" />
 
       <div className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.25fr_0.75fr] lg:px-12 lg:py-20">
         <div className="max-w-3xl">
-          <div className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[rgb(144_224_239)]"><span className="h-px w-10 bg-[rgb(144_224_239)]" />Mapping ideas into impact</div>
-          <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">Hi, I’m <span className="text-[rgb(144_224_239)]">Omotayo Quadri.</span></h1>
-          <p className="font-display mt-7 max-w-2xl text-xl font-medium leading-relaxed text-cyan-50 sm:text-2xl">GIS Analyst <span className="text-cyan-200/50">|</span> Geospatial Developer <span className="text-cyan-200/50">|</span> Geospatial Engineer</p>
+          <div className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[#34cee9]"><span className="h-px w-10 bg-[#90e0ef]" />Mapping ideas into impact</div>
+          <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">Hi, I’m <span className="#90E0EF">Omotayo Quadri.</span></h1>
+          <p className="font-display mt-7 max-w-2xl text-xl font-medium leading-relaxed text-cyan-50 sm:text-2xl">GIS Analyst <span className="text-[#90E0EF]">|</span> Geospatial Developer <span className="text-[#90E0EF]">|</span> Geospatial Engineer</p>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">I combine GIS, software development and cloud technologies to analyse spatial data, build geospatial applications and deliver deployable solutions to real-world problems.</p>
           <a href="#contact" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[rgb(144_224_239)] px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_12px_35px_rgba(144,224,239,0.2)] transition hover:-translate-y-0.5 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200">Get in touch <ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
         </div>

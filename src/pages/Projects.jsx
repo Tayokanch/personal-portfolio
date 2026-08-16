@@ -39,10 +39,10 @@ function Projects() {
   const featured = projects.find((project) => project.featured);
 
   return (
-    <main className="min-h-screen bg-slate-950 pt-20 text-white">
+    <main className="portfolio-projects min-h-screen pt-20">
       <section className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <p className="text-xs font-bold uppercase tracking-[0.28em] text-[rgb(144_224_239)]">My work</p>
-        <h1 className="font-display mt-4 text-5xl font-semibold tracking-[-0.04em] sm:text-7xl">Projects</h1>
+        <h1 className="font-display mt-4 text-5xl font-semibold tracking-[-0.04em] sm:text-7xl pb-2">Projects</h1>
         <p className="mt-5 max-w-3xl text-base leading-7 text-slate-400 sm:text-lg">A collection of GIS, geospatial engineering, software development and deployment projects focused on solving practical problems with data and technology.</p>
 
         <div aria-label="Filter projects by category" className="mt-10 flex gap-2 overflow-x-auto pb-2">

@@ -55,7 +55,7 @@ function ContactLink({ item }) {
 
 function About() {
   return (
-    <main className="min-h-screen overflow-hidden bg-slate-950 pt-20 text-white">
+    <main className="portfolio-about min-h-screen overflow-hidden pt-20">
       <section className="relative isolate">
         <div className="absolute left-[-12rem] top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/[0.07] blur-3xl" />
         <div className="absolute right-[-10rem] top-1/3 -z-10 h-96 w-96 rounded-full bg-blue-500/[0.06] blur-3xl" />

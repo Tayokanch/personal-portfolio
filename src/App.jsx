@@ -31,7 +31,7 @@ function RouteScrollManager() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="portfolio-shell min-h-screen">
       <Navbar />
       <RouteScrollManager />
       <Routes>

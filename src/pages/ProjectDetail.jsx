@@ -12,13 +12,13 @@ function ProjectDetail() {
   if (project.caseStudyType === 'greater-manchester') return <GreaterManchesterCaseStudy />;
 
   if (project.placeholder) return (
-    <main className="grid min-h-screen place-items-center bg-slate-950 px-5 pt-20 text-white">
+    <main className="portfolio-case-study grid min-h-screen place-items-center px-5 pt-20">
       <div className="max-w-2xl text-center"><p className="text-xs font-bold uppercase tracking-[0.24em] text-[rgb(144_224_239)]">{project.categories[0]}</p><h1 className="font-display mt-5 text-4xl font-semibold sm:text-6xl">{project.title}</h1><p className="mt-6 leading-7 text-slate-400">This route is ready. The complete case study will be added when the project information and final visuals are available.</p><Link to="/projects" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[rgb(144_224_239)] px-5 py-3 text-sm font-bold text-slate-950"><ArrowLeft className="h-4 w-4" /> Back to projects</Link></div>
     </main>
   );
 
   return (
-    <main className="min-h-screen bg-slate-950 pt-20 text-white">
+    <main className="portfolio-case-study min-h-screen pt-20">
       <article>
         <header className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
           <nav aria-label="Breadcrumb" className="text-sm text-slate-400"><Link to="/projects" className="hover:text-cyan-200">Projects</Link><span className="mx-2">/</span><span className="text-slate-200">{project.shortTitle}</span></nav>
@@ -28,7 +28,7 @@ function ProjectDetail() {
           </div>
         </header>
 
-        <section className="border-y border-white/[0.07] bg-slate-900/50"><div className="mx-auto grid w-full max-w-7xl gap-6 px-5 py-8 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-12">{[['Role', project.role], ['Status', project.status], ['Year', project.year], ['Core stack', project.tags.slice(0, 3).join(', ')]].map(([label, value]) => <div key={label}><p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-cyan-200/50">{label}</p><p className="mt-2 text-sm font-semibold text-slate-100">{value}</p></div>)}</div></section>
+        <section className="border-y border-white/[0.07] bg-slate-900/50"><div className="mx-auto grid w-full max-w-7xl gap-6 px-5 py-8 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-12">{[['Role', project.role], ['Status', project.status], ['Year', project.year], ['Core stack', project.tags.slice(0, 3).join(', ')]].map(([label, value]) => <div key={label}><p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#90E0EF]">{label}</p><p className="mt-2 text-sm font-semibold text-slate-100">{value}</p></div>)}</div></section>
 
         <div className="mx-auto w-full max-w-4xl space-y-16 px-5 py-20 sm:px-8 lg:py-28">
           <section><p className="text-xs font-bold uppercase tracking-[0.22em] text-[rgb(144_224_239)]">01 · Overview</p><h2 className="font-display mt-3 text-3xl font-semibold">The project</h2><p className="mt-5 text-base leading-8 text-slate-300">{project.overview}</p></section>

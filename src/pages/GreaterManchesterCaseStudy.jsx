@@ -20,7 +20,7 @@ function StatGrid({ items }) { return <div className="grid gap-3 sm:grid-cols-2 
 
 function GreaterManchesterCaseStudy() {
   return (
-    <main className="min-h-screen bg-slate-950 pt-20 text-white">
+    <main className="portfolio-case-study portfolio-gis-case-study min-h-screen pt-20">
       <article>
         <header className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
           <nav aria-label="Breadcrumb" className="text-sm text-slate-400"><Link to="/projects" className="hover:text-cyan-200">Projects</Link><span className="mx-2">/</span><span className="text-slate-200">Greater Manchester Transport Accessibility</span></nav>

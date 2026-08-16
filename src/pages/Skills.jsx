@@ -1,5 +1,5 @@
 import { CloudCog, Code2, Map } from 'lucide-react';
-import skillsBanner from '../assets/gis-banner2.jpg';
+import skillsBanner from '../assets/gis-banner5.webp';
 
 const skillGroups = [
   {
@@ -52,12 +52,12 @@ function SkillCard({ group, number }) {
 
 function Skills() {
   return (
-    <section id="skills" className="scroll-mt-20 bg-slate-950 text-white">
+    <section id="skills" className="portfolio-skills scroll-mt-20">
       <div
         aria-label="Aerial geographic landscape"
-        className="relative flex min-h-[55vh] items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed px-5 py-24 max-md:bg-scroll"
-        style={{ backgroundImage: `url(${skillsBanner})` }}
+        className="relative"
       >
+        <img src={skillsBanner} alt="Aerial geographic landscape" className="block h-auto w-full" />
         <div className="absolute inset-0 bg-slate-950/35" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(2,6,23,0.08),rgba(2,6,23,0.68))]" />
         <div className="relative rounded-2xl border border-cyan-100/55 bg-slate-950/65 px-8 py-5 shadow-[0_0_0_1px_rgba(15,23,42,0.5),0_20px_70px_rgba(2,6,23,0.55)] backdrop-blur-md sm:px-12 sm:py-7">

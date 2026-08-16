@@ -27,7 +27,7 @@ function GlobeIcon() {
 
 function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-cyan-200/10 bg-slate-950/75 backdrop-blur-xl">
+    <header className="portfolio-nav fixed inset-x-0 top-0 z-50">
       <nav
         aria-label="Main navigation"
         className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12"
@@ -47,7 +47,7 @@ function Navbar() {
               <Link
                 to={to}
                 state={scrollTo ? { scrollTo } : undefined}
-                className="group relative block py-2 text-sm font-medium tracking-wide text-[rgb(144_224_239)] transition-colors hover:text-white focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 sm:text-base"
+                className="group relative block py-2 text-sm font-medium tracking-wide text-rgb(144_224_239)] transition-colors hover:text-white focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 sm:text-base"
               >
                 {label}
                 <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-[rgb(144_224_239)] transition-transform duration-300 group-hover:scale-x-100" />
