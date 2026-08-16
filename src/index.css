@@ -1,0 +1,18 @@
+@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/space-grotesk";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope Variable", sans-serif;
+  --font-display: "Space Grotesk Variable", sans-serif;
+  /* Experimental palette: deep teal canvas with a soft lavender accent. */
+  --color-slate-950: #214a58;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #214a58; }
+
+/* Centralised overrides for the original cyan accent utilities. */
+.text-\[rgb\(144_224_239\)\] { color: #c3c3e5 !important; }
+.bg-\[rgb\(144_224_239\)\] { background-color: #c3c3e5 !important; }
+.border-\[rgb\(144_224_239\)\] { border-color: #c3c3e5 !important; }
