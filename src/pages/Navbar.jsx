@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import saturnIcon from '../assets/planet-saturn-space-icon.svg';
 
 const navLinks = [
   { label: 'Home', to: '/', scrollTo: 'home' },
@@ -6,24 +7,6 @@ const navLinks = [
   { label: 'Skills', to: '/', scrollTo: 'skills' },
   { label: 'Project', to: '/projects' },
 ];
-
-function GlobeIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-7 w-7 animate-[spin_10s_linear_infinite] motion-reduce:animate-none"
-    >
-      <circle cx="12" cy="12" r="9" />
-      <path d="M3 12h18M12 3c2.25 2.47 3.4 5.47 3.4 9S14.25 18.53 12 21M12 3C9.75 5.47 8.6 8.47 8.6 12s1.15 6.53 3.4 9" />
-    </svg>
-  );
-}
 
 function Navbar() {
   return (
@@ -35,10 +18,10 @@ function Navbar() {
         <Link
           to="/"
           aria-label="Go to home"
-          className="group relative grid h-10 w-10 shrink-0 place-items-center text-[var(--color-ink)] max-[520px]:hidden"
+          className="group relative grid h-12 w-12 shrink-0 place-items-center max-[520px]:hidden"
         >
           <span className="absolute inset-1 border border-dashed border-[var(--color-accent)]" />
-          <GlobeIcon />
+          <img src={saturnIcon} alt="" aria-hidden="true" className="h-9 w-9 animate-[spin_10s_linear_infinite] object-contain motion-reduce:animate-none" />
         </Link>
 
         <ul className="flex items-center gap-[clamp(var(--space-xs),2.5vw,var(--space-xl))] max-[520px]:w-full max-[520px]:justify-between max-[520px]:gap-[var(--space-2xs)]">
@@ -47,7 +30,7 @@ function Navbar() {
               <Link
                 to={to}
                 state={scrollTo ? { scrollTo } : undefined}
-                className="group relative block whitespace-nowrap py-2 text-base font-medium tracking-wide text-[var(--color-ink)] max-[520px]:text-sm"
+                className="group relative block whitespace-nowrap py-2 text-lg font-medium tracking-wide text-[var(--color-ink)] max-[520px]:text-base"
               >
                 {label}
                 <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-[var(--color-accent)] transition-transform duration-300 group-hover:scale-x-100" />
