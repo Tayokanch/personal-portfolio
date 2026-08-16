@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  personal-portfolio:
+    build: .
+    image: personal-portfolio:latest
+    container_name: personal-portfolio
+    restart: always
+    expose:
+      - 80
+    networks:
+      - voguenest_network
+
+networks:
+  voguenest_network:
+    external: true
