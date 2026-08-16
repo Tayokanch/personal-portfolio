@@ -41,7 +41,7 @@ function Projects() {
   return (
     <main className="min-h-screen bg-[var(--color-paper)] pt-20 text-[var(--color-ink)]">
       <section className="mx-auto w-full max-w-320 px-[clamp(var(--space-sm),4vw,var(--space-xl))] pb-[var(--space-4xl)] pt-[var(--space-3xl)]">
-        <p className="text-xs font-bold uppercase tracking-[0.28em] text-[rgb(144_224_239)]">My work</p>
+        <p className="text-xs font-bold uppercase tracking-[0.28em] text-[var(--color-accent)]">My work</p>
         <h1 className="mt-4 pb-2 text-[length:var(--text-display)] font-semibold leading-[.8] tracking-[-0.04em] text-[var(--color-skill-card-blue)]">Projects</h1>
         <p className="mt-5 max-w-3xl text-base leading-7 text-[var(--color-ink-2)] sm:text-lg">A collection of GIS, geospatial engineering, software development and deployment projects focused on solving practical problems with data and technology.</p>
 

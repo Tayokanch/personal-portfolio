@@ -65,8 +65,8 @@ function Skills() {
 
       <div className="w-full px-[clamp(var(--space-sm),8vw,var(--space-3xl))] pb-[var(--space-4xl)] pt-[var(--space-3xl)]">
         <div className="mb-12 ml-[18%] max-w-2xl max-[900px]:ml-0">
-          <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[rgb(144_224_239)]">
-            <span className="h-px w-10 bg-[rgb(144_224_239)]" />
+          <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[var(--color-accent)]">
+            <span className="h-px w-10 bg-[var(--color-accent)]" />
             Technical expertise
           </p>
           <h2 className="font-display mt-5 text-[length:clamp(2.75rem,6vw,5.5rem)] font-semibold leading-[.95] tracking-[-0.03em] text-[var(--color-ink)]">Tools that turn spatial data into solutions.</h2>

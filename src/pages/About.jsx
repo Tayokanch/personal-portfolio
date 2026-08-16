@@ -60,7 +60,7 @@ function About() {
         <div className="w-full px-[clamp(var(--space-sm),6vw,var(--space-3xl))] pb-[var(--space-4xl)] pt-[var(--space-3xl)]">
           <div className="grid grid-cols-[minmax(0,1.45fr)_minmax(16rem,.55fr)] items-start gap-14 max-[900px]:grid-cols-1 lg:gap-20">
             <div>
-              <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[rgb(144_224_239)]">
+              <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[var(--color-accent)]">
                 <span className="h-px w-10 bg-[rgb(144_224_239)]" />
                 About me
               </p>
@@ -87,7 +87,7 @@ function About() {
                 </p>
                 <p>
                   My goal is to become a{' '}
-                  <span className="font-semibold text-[rgb(144_224_239)]">
+                  <span className="font-semibold text-[var(--color-accent)]">
                     Geospatial Engineer
                   </span>
                   . I am developing my knowledge of Python, PostGIS, GeoPandas,
@@ -113,7 +113,7 @@ function About() {
                   <p className="font-display text-xl font-semibold text-[var(--color-ink)]">
                     Omotayo Quadri
                   </p>
-                  <p className="mt-1 text-sm text-[rgb(144_224_239)]">
+                  <p className="mt-1 text-sm text-[var(--color-accent)]">
                     GIS Professional · Manchester, UK
                   </p>
                 </figcaption>
@@ -124,7 +124,7 @@ function About() {
           <div className="mt-20 border-t border-[var(--color-rule)] p-5 sm:p-7">
             <div className="mb-6 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[rgb(144_224_239)]">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-accent)]">
                   Connect
                 </p>
                 <h2 className="font-display mt-2 text-2xl font-semibold text-[var(--color-ink)]">
