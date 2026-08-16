@@ -57,7 +57,7 @@ function GreaterManchesterCaseStudy() {
 
           <section className="rounded-3xl border border-cyan-200/15 bg-slate-900/70 p-7 sm:p-10"><Label>Data sources</Label><div className="mt-6 grid gap-6 sm:grid-cols-3"><div><h3 className="font-display font-semibold">Transport</h3><p className="mt-2 text-sm leading-6 text-slate-400">Department for Transport, National Bus Open Data Service, Greater Manchester Metrolink Network and OpenStreetMap.</p></div><div><h3 className="font-display font-semibold">Geography</h3><p className="mt-2 text-sm leading-6 text-slate-400">Office for National Statistics LSOA boundaries.</p></div><div><h3 className="font-display font-semibold">Population</h3><p className="mt-2 text-sm leading-6 text-slate-400">WorldPop 2021, 100 m gridded population.</p></div></div></section>
 
-          <footer className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8"><Link to="/projects" className="inline-flex items-center gap-2 font-bold text-[rgb(144_224_239)]"><ArrowLeft className="h-4 w-4" /> Back to projects</Link><Link to="/projects/bangalore-metro-population-coverage" className="inline-flex items-center gap-2 font-bold text-white">Next project <ArrowRight className="h-4 w-4" /></Link></footer>
+          <footer className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8"><Link to="/projects" className="inline-flex items-center gap-2 font-bold text-[rgb(144_224_239)]"><ArrowLeft className="h-4 w-4" /> Back to projects</Link><Link to="/projects/practical-qgis-projects" className="inline-flex items-center gap-2 font-bold text-white">Next project <ArrowRight className="h-4 w-4" /></Link></footer>
         </div>
       </article>
     </main>

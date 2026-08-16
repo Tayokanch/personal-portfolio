@@ -4,12 +4,14 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { getProject } from '../data/projects';
 import { ProjectVisual } from './Projects';
 import GreaterManchesterCaseStudy from './GreaterManchesterCaseStudy';
+import PracticalQgisCaseStudy from './PracticalQgisCaseStudy';
 
 function ProjectDetail() {
   const { slug } = useParams();
   const project = getProject(slug);
   if (!project) return <Navigate to="/projects" replace />;
   if (project.caseStudyType === 'greater-manchester') return <GreaterManchesterCaseStudy />;
+  if (project.caseStudyType === 'practical-qgis') return <PracticalQgisCaseStudy />;
 
   if (project.placeholder) return (
     <main className="portfolio-case-study grid min-h-screen place-items-center px-5 pt-20">

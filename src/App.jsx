@@ -1,11 +1,12 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import About from './pages/About'
 import HomePage from './pages/HomePage'
 import Navbar from './pages/Navbar'
-import ProjectDetail from './pages/ProjectDetail'
-import Projects from './pages/Projects'
 import Skills from './pages/Skills'
+
+const About = lazy(() => import('./pages/About'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const Projects = lazy(() => import('./pages/Projects'))
 
 function RouteScrollManager() {
   const location = useLocation()
@@ -34,12 +35,14 @@ function App() {
     <div className="portfolio-shell min-h-screen">
       <Navbar />
       <RouteScrollManager />
-      <Routes>
-        <Route path="/" element={<main><HomePage /><Skills /></main>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:slug" element={<ProjectDetail />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<main><HomePage /><Skills /></main>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

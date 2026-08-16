@@ -22,7 +22,8 @@ Editorial.
 
 ## Typography
 
-- Display: Playfair Display, weight 600, roman.
+- Primary headings: Fraunces, weight 500–700, roman.
+- Secondary headings: Space Grotesk Variable, weight 600, roman.
 - Body: Inter, weight 400–600.
 - Display tracking: `-0.035em`.
 - Type scale anchor: `clamp(4rem, 10vw, 9rem)`.

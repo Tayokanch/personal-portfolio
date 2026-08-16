@@ -1,6 +1,8 @@
 import diaryImage from '../assets/projects/diaryhub.gif';
+import fiatureImage from '../assets/fiature.png'
 import vogueImage from '../assets/projects/voguenest.gif';
 import manchesterHero from '../assets/hero_map.png';
+import practicalQgisHero from '../assets/10_largest_earthquakes.png';
 
 export const categories = ['All Projects', 'GIS & Spatial Analysis', 'Geospatial Engineering', 'Software Engineering', 'DevOps & Cloud'];
 
@@ -9,10 +11,7 @@ export const projects = [
     slug: 'greater-manchester-transport-coverage', title: 'Greater Manchester Transport Accessibility', shortTitle: 'Transport Accessibility', categories: ['GIS & Spatial Analysis'], summary: 'Examining transport infrastructure, geographic coverage and population accessibility across Greater Manchester.', tags: ['QGIS', 'Spatial Analysis', 'Raster Analysis', 'Zonal Statistics', 'Cartography'], status: 'Completed', year: '2026', role: 'Geospatial Analyst', image: manchesterHero, imageAlt: 'Map from the Greater Manchester public transport accessibility study', caseStudyType: 'greater-manchester', featured: true,
   },
   {
-    slug: 'bangalore-metro-population-coverage', title: 'Bangalore Metro Population Coverage', shortTitle: 'Metro Coverage', categories: ['GIS & Spatial Analysis', 'Geospatial Engineering'], summary: 'A spatial assessment of metro accessibility and population coverage across Bangalore.', tags: ['QGIS', 'Raster Analysis', 'Network Coverage'], status: 'Coming soon', placeholder: true,
-  },
-  {
-    slug: 'historical-bangalore-georeferencing', title: 'Historical Bangalore Georeferencing', shortTitle: 'Historical Georeferencing', categories: ['GIS & Spatial Analysis'], summary: 'Georeferencing historical mapping to compare past and present urban geography in Bangalore.', tags: ['Georeferencing', 'Cartography', 'QGIS'], status: 'Coming soon', placeholder: true,
+    slug: 'practical-qgis-projects', title: 'Practical QGIS: Hands-On GIS Projects & Spatial Analysis', shortTitle: 'Practical QGIS', categories: ['GIS & Spatial Analysis', 'Geospatial Engineering'], summary: 'Five applied GIS projects covering thematic mapping, georeferencing, digitising, raster analysis and spatial accessibility.', tags: ['QGIS', 'Spatial Analysis', 'Cartography'], status: 'Completed', role: 'GIS Analyst', image: practicalQgisHero, imageAlt: 'Map of the ten deadliest earthquakes between 2000 and 2020', caseStudyType: 'practical-qgis', featured: false,
   },
   {
     slug: 'diary-api', title: 'DiaryHub API & Deployment Platform', shortTitle: 'DiaryHub API', categories: ['Software Engineering', 'DevOps & Cloud'], summary: 'A containerised journal API with JWT authentication, PostgreSQL persistence, automated delivery and load-balanced service replicas.', tags: ['Node.js', 'PostgreSQL', 'Docker', 'Jenkins', 'Nginx'], status: 'Completed', year: '2026', role: 'Backend & DevOps Engineer', image: diaryImage, imageAlt: 'DiaryHub container and deployment architecture diagram', githubUrl: 'https://github.com/Tayokanch/Diary-API', liveUrl: 'https://diaryhubapi.tayolabs.dev', featured: false,
@@ -31,7 +30,7 @@ export const projects = [
     outcome: 'The result is an end-to-end demonstration of frontend engineering, layered backend design, payment integration and secure container-based application delivery.',
   },
   {
-    slug: 'fiature-dashboard', title: 'Fiature Cryptocurrency Dashboard', shortTitle: 'Fiature Dashboard', categories: ['Software Engineering', 'DevOps & Cloud'], summary: 'A responsive React dashboard for exploring cryptocurrency markets, portfolio activity, watchlists, news and price trends.', tags: ['React', 'Tailwind CSS', 'Recharts', 'Docker', 'Nginx'], status: 'Completed', year: '2026', role: 'Frontend & Deployment Engineer', imageType: 'dashboard', imageAlt: 'Code-rendered preview of the Fiature cryptocurrency dashboard', githubUrl: 'https://github.com/Tayokanch/Fiature-Dashbaord', liveUrl: 'https://faiture.tayolabs.dev', featured: false,
+    slug: 'fiature-dashboard', title: 'Fiature Cryptocurrency Dashboard', shortTitle: 'Fiature Dashboard', categories: ['Software Engineering', 'DevOps & Cloud'], summary: 'A responsive React dashboard for exploring cryptocurrency markets, portfolio activity, watchlists, news and price trends.', tags: ['React', 'Tailwind CSS', 'Recharts', 'Docker', 'Nginx'], status: 'Completed', year: '2026', role: 'Frontend & Deployment Engineer', image:fiatureImage,  imageAlt: 'Code-rendered preview of the Fiature cryptocurrency dashboard', githubUrl: 'https://github.com/Tayokanch/Fiature-Dashbaord', liveUrl: 'https://faiture.tayolabs.dev', featured: false,
     overview: 'Fiature is a single-page cryptocurrency dashboard designed to bring market information, portfolio tracking and visual analysis into one responsive interface.',
     features: ['Market overview and portfolio tracking', 'Watchlist and transaction views', 'Interactive historical charts with Recharts', 'News, alerts and responsive client-side navigation'],
     architecture: 'React Context and custom hooks manage client state and reusable data workflows. The production build is served by Nginx as a static SPA.',

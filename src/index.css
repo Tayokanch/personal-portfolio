@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=Inter:wght@400;500;600&display=swap");
+@import "@fontsource-variable/space-grotesk";
 @import "../tokens.css";
 @import "tailwindcss";
 
@@ -7,7 +8,7 @@
  * contrast: pass (40–41) · nav: N1b · footer: Ft2 · slop: pass (42–45)
  * honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · mobile: pass (34, 49, 50–57)
  */
-@theme { --font-sans: var(--font-body); --font-display: var(--font-display); --color-slate-950: var(--color-ink); }
+@theme { --font-sans: var(--font-body); --font-display: var(--font-display-family); --color-slate-950: var(--color-ink); }
 html, body { overflow-x: clip; scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-size: var(--text-md); text-rendering: optimizeLegibility; }
 ::selection { background: var(--color-accent); color: var(--color-accent-ink); }
@@ -15,7 +16,8 @@ a, button { transition: color var(--dur-short) var(--ease-out), background-color
 a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus) !important; outline-offset: 4px; }
 a:active, button:active { transform: translateY(1px); }
 button:disabled { cursor: not-allowed; opacity: .55; }
-.font-display, h1, h2, h3 { font-family: var(--font-display) !important; font-style: normal; overflow-wrap: anywhere; min-width: 0; }
+.font-display, h1, h2, h3 { font-family: var(--font-display-family) !important; font-style: normal; overflow-wrap: anywhere; min-width: 0; }
+h1 { font-family: var(--font-heading) !important; font-style: normal; }
 .portfolio-shell { min-height: 100vh; background: var(--color-paper); color: var(--color-ink); }
 
 .portfolio-nav { border-bottom: var(--rule-hairline) solid var(--color-rule); background: color-mix(in oklch, var(--color-paper) 94%, transparent); backdrop-filter: blur(12px); }
@@ -34,8 +36,9 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .portfolio-home > div:last-child > div { max-width: 56rem !important; }
 .portfolio-home > div:last-child > div:first-child { position: relative; z-index: 0; }
 .portfolio-home > div:last-child > div:first-child::before { content: ""; position: absolute; inset: calc(var(--space-xl) * -1) calc(var(--space-3xl) * -1) calc(var(--space-xl) * -1) calc(var(--space-lg) * -1); z-index: -1; background: linear-gradient(90deg, color-mix(in oklch, var(--color-ink) 76%, transparent), color-mix(in oklch, var(--color-ink) 42%, transparent) 64%, transparent); pointer-events: none; }
-.portfolio-home h1 { max-width: 8ch; font-size: var(--text-display) !important; font-weight: 600 !important; line-height: .82 !important; letter-spacing: -.055em !important; color: var(--color-ink) !important; }
-.portfolio-home h1 span, .portfolio-home [class*="text-[rgb"] { color: var(--color-accent) !important; }
+.portfolio-home h1 { max-width: 8ch; font-size: var(--text-display) !important; font-weight: 600 !important; line-height: .82 !important; letter-spacing: -.055em !important; color: var(--color-paper) !important; }
+.portfolio-home h1 span { color: var(--color-highlight) !important; }
+.portfolio-home [class*="text-[rgb"] { color: var(--color-accent) !important; }
 .portfolio-home p { color: color-mix(in oklch, var(--color-paper) 78%, var(--color-ink)) !important; }
 .portfolio-home > div:last-child > div > div:first-child { color: var(--color-accent) !important; letter-spacing: .14em !important; }
 .portfolio-home > div:last-child > div > div:first-child span { background: var(--color-accent) !important; }
@@ -54,8 +57,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .portfolio-home aside a:hover > span:first-child { color: var(--color-accent) !important; }
 
 .portfolio-skills { background: var(--color-paper); color: var(--color-ink); border-top: var(--rule-hairline) solid var(--color-rule); }
-.portfolio-skills > div:first-child { min-height: 0 !important; background: var(--color-ink) !important; padding: 0 !important; }
-.portfolio-skills > div:first-child > img { display: block; width: 100%; height: auto; }
+.portfolio-skills > div:first-child { height: clamp(18rem, 38vw, 32rem); min-height: 0 !important; background: var(--color-ink) !important; padding: 0 !important; }
+.portfolio-skills > div:first-child > img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .portfolio-skills > div:first-child::before { content: ""; position: absolute; inset: 0; background: color-mix(in oklch, var(--color-ink) 58%, transparent); }
 .portfolio-skills > div:first-child > div:nth-child(-n+2) { display: none; }
 .portfolio-skills > div:first-child > div:last-child { position: absolute !important; inset-inline-start: clamp(var(--space-sm), 8vw, var(--space-3xl)); inset-block-start: 50%; transform: translateY(-50%); border: 0 !important; border-radius: 0 !important; background: transparent !important; box-shadow: none !important; backdrop-filter: none !important; padding: 0 !important; }
@@ -78,7 +81,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .portfolio-about, .portfolio-projects, .portfolio-case-study { background: var(--color-paper) !important; color: var(--color-ink) !important; }
 .portfolio-about [class*="bg-cyan"], .portfolio-about [class*="bg-blue"], .portfolio-projects [class*="bg-cyan"], .portfolio-case-study [class*="bg-cyan"] { background: transparent !important; }
 .portfolio-about [class*="blur-3xl"] { display: none; }
-.portfolio-about h1, .portfolio-projects h1, .portfolio-case-study h1, .portfolio-about h2, .portfolio-projects h2, .portfolio-case-study h2, .portfolio-about h3, .portfolio-projects h3, .portfolio-case-study h3 { color: var(--color-ink) !important; }
+.portfolio-about h1, .portfolio-projects h1, .portfolio-case-study h1 { color: var(--color-skill-card-blue) !important; }
+.portfolio-about h2, .portfolio-projects h2, .portfolio-case-study h2, .portfolio-about h3, .portfolio-projects h3, .portfolio-case-study h3 { color: var(--color-ink) !important; }
 .portfolio-about p, .portfolio-projects p, .portfolio-case-study p, .portfolio-about span, .portfolio-projects span, .portfolio-case-study span { color: var(--color-ink-2); }
 .portfolio-about [class*="text-[rgb"], .portfolio-projects [class*="text-[rgb"], .portfolio-case-study [class*="text-[rgb"], .portfolio-about [class*="text-cyan"], .portfolio-projects [class*="text-cyan"], .portfolio-case-study [class*="text-cyan"] { color: var(--color-accent) !important; }
 
@@ -118,9 +122,6 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .portfolio-case-study [class*="border-white"], .portfolio-case-study [class*="border-cyan"] { border-color: var(--color-rule) !important; }
 .portfolio-case-study [class*="rounded-full"] { border-radius: 0 !important; }
 .portfolio-case-study a[class*="bg-[rgb"] { background: var(--color-ink) !important; color: var(--color-paper) !important; }
-.portfolio-gis-case-study article > div:last-child { max-width: none !important; padding-inline: clamp(var(--space-sm), 8vw, var(--space-4xl)) !important; }
-.portfolio-gis-case-study article > div:last-child > section { width: min(68rem, 100%); }
-.portfolio-gis-case-study article > div:last-child > section:nth-child(even) { margin-left: auto; }
 .portfolio-gis-case-study figure img { filter: saturate(.75) contrast(.96); }
 
 @media (max-width: 900px) {
@@ -147,8 +148,3 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
-
-.portfolio-shell h1 { color: var(--color-skill-card) !important; }
-.portfolio-home h1 { color: var(--color-paper) !important; }
-.portfolio-home h1 span { color: var(--color-highlight) !important; }
-.portfolio-about h1, .portfolio-projects h1, .portfolio-case-study h1 { color: var(--color-skill-card-blue) !important; }

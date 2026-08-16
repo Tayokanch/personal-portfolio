@@ -3,11 +3,11 @@ import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 
 const contactDetails = [
-  { label: 'Phone', value: '+44 (0) 0000 000000', href: 'tel:+440000000000', icon: Phone },
-  { label: 'Email', value: 'hello@yourdomain.com', href: 'mailto:hello@yourdomain.com', icon: Mail },
+  { label: 'Phone', value: '+44 (0) 70466 2016', href: 'tel:+447466072016', icon: Phone },
+  { label: 'Email', value: 'hello@yourdomain.com', href: 'quadrimotayo@gmail,com', icon: Mail },
   { label: 'Location', value: 'London, United Kingdom', icon: MapPin },
-  { label: 'LinkedIn', value: 'Connect with me', href: 'https://www.linkedin.com/', icon: FaLinkedinIn },
-  { label: 'GitHub', value: 'View my code', href: 'https://github.com/', icon: FaGithub },
+  { label: 'LinkedIn', value: 'Connect with me', href: 'www.linkedin.com/in/omotayoqua', icon: FaLinkedinIn },
+  { label: 'GitHub', value: 'View my code', href: 'https://github.com/Tayokanch', icon: FaGithub },
 ];
 
 function ContactItem({ item }) {
@@ -27,7 +27,7 @@ function HomePage() {
       <div className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[1.25fr_0.75fr] lg:px-12 lg:py-20">
         <div className="max-w-3xl">
           <div className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[#34cee9]"><span className="h-px w-10 bg-[#90e0ef]" />Mapping ideas into impact</div>
-          <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">Hi, I’m <span className="#90E0EF">Omotayo Quadri.</span></h1>
+          <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">Hi, I’m <span className="text-[#90E0EF]">Omotayo Quadri.</span></h1>
           <p className="font-display mt-7 max-w-2xl text-xl font-medium leading-relaxed text-cyan-50 sm:text-2xl">GIS Analyst <span className="text-[#90E0EF]">|</span> Geospatial Developer <span className="text-[#90E0EF]">|</span> Geospatial Engineer</p>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">I combine GIS, software development and cloud technologies to analyse spatial data, build geospatial applications and deliver deployable solutions to real-world problems.</p>
           <a href="#contact" className="mt-9 inline-flex items-center gap-3 rounded-full bg-[rgb(144_224_239)] px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_12px_35px_rgba(144,224,239,0.2)] transition hover:-translate-y-0.5 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200">Get in touch <ArrowRight aria-hidden="true" className="h-4 w-4" /></a>
