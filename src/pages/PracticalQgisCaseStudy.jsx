@@ -49,11 +49,11 @@ function SkillList({ children }) {
 
 function PracticalQgisCaseStudy() {
   return (
-    <main className="portfolio-case-study portfolio-gis-case-study min-h-screen pt-20">
+    <main className="min-h-screen pt-20 bg-[var(--color-paper)] text-[var(--color-ink)] [&_h1]:text-[var(--color-skill-card-blue)]! [&_h2]:text-[var(--color-ink)]! [&_h3]:text-[var(--color-ink)]! [&_p]:text-[var(--color-ink-2)] [&_span]:text-[var(--color-ink-2)] [&_[class*='text-cyan']]:text-[var(--color-accent)]! [&_[class*='text-[rgb']]:text-[var(--color-accent)]! [&_[class*='bg-cyan']]:bg-transparent! [&_[class*='bg-slate-900']]:bg-transparent! [&_[class*='border-white']]:border-[var(--color-rule)]! [&_[class*='border-cyan']]:border-[var(--color-rule)]! [&_[class*='rounded-3xl']]:rounded-none! [&_[class*='rounded-2xl']]:rounded-none! [&_[class*='rounded-full']]:rounded-none! [&_figure]:rounded-none! [&_figure]:border-0! [&_figure]:bg-transparent! [&_figure]:shadow-none! [&_figure_img]:saturate-75 [&_figcaption]:border-[var(--color-rule)]!">
       <article>
-        <header className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
+        <header className="w-full px-[clamp(var(--space-sm),6vw,var(--space-3xl))] pb-[var(--space-2xl)] pt-[var(--space-3xl)]">
           <nav aria-label="Breadcrumb" className="text-sm text-slate-400"><Link to="/projects">Projects</Link><span className="mx-2">/</span><span>Practical QGIS</span></nav>
-          <div className="mt-10 grid items-end gap-10 lg:grid-cols-[0.7fr_1.3fr]">
+          <div className="mt-10 grid grid-cols-[minmax(0,.65fr)_minmax(0,1.35fr)] items-end gap-10 max-[900px]:grid-cols-1">
             <div>
               <Label>01 · GIS · QGIS · Spatial Analysis · Cartography</Label>
               <h1 className="font-display mt-5 text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">Practical QGIS: Hands-On GIS Projects & Spatial Analysis</h1>
@@ -66,7 +66,7 @@ function PracticalQgisCaseStudy() {
           <div className="mt-10 grid gap-4 border-y border-white/10 py-7 sm:grid-cols-2 lg:grid-cols-4">{[['Software', 'QGIS'], ['Projects', '5'], ['Training', 'Spatial Thoughts'], ['Focus', 'GIS Fundamentals · Spatial Analysis · Cartography']].map(([label, value]) => <div key={label}><p className="text-[0.65rem] font-bold uppercase tracking-[0.18em]">{label}</p><p className="mt-2 text-sm font-semibold">{value}</p></div>)}</div>
         </header>
 
-        <div className="mx-auto w-full max-w-6xl space-y-28 px-5 pb-24 sm:px-8 lg:px-12">
+        <div className="mx-auto w-full max-w-312 space-y-28 px-5 pb-24 sm:px-8 lg:px-12 [&>section]:border-t [&>section]:border-[var(--color-rule)] [&>section]:pt-[var(--space-xl)]">
           <section>
             <Label>02 · Context</Label>
             <h2 className="font-display mt-4 text-3xl font-semibold sm:text-4xl">Building Practical GIS Foundations</h2>

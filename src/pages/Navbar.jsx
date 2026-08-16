@@ -27,30 +27,30 @@ function GlobeIcon() {
 
 function Navbar() {
   return (
-    <header className="portfolio-nav fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--color-rule)] bg-[color-mix(in_oklch,var(--color-paper)_94%,transparent)] backdrop-blur-xl">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12"
+        className="flex h-17 w-full items-center justify-between px-[clamp(var(--space-sm),4vw,var(--space-xl))] max-[520px]:px-[var(--space-sm)]"
       >
         <Link
           to="/"
           aria-label="Go to home"
-          className="group relative grid h-12 w-12 shrink-0 place-items-center rounded-full border border-cyan-200/30 text-[rgb(144_224_239)] shadow-[0_0_25px_rgba(144,224,239,0.14)] transition hover:border-cyan-200/70 hover:bg-cyan-200/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
+          className="group relative grid h-10 w-10 shrink-0 place-items-center text-[var(--color-ink)] max-[520px]:hidden"
         >
-          <span className="absolute inset-1 animate-[spin_6s_linear_infinite] rounded-full border border-dashed border-cyan-200/35 motion-reduce:animate-none" />
+          <span className="absolute inset-1 border border-dashed border-[var(--color-accent)]" />
           <GlobeIcon />
         </Link>
 
-        <ul className="flex items-center gap-4 sm:gap-8 md:gap-12">
+        <ul className="flex items-center gap-[clamp(var(--space-xs),2.5vw,var(--space-xl))] max-[520px]:w-full max-[520px]:justify-between max-[520px]:gap-[var(--space-2xs)]">
           {navLinks.map(({ label, to, scrollTo }) => (
             <li key={label}>
               <Link
                 to={to}
                 state={scrollTo ? { scrollTo } : undefined}
-                className="group relative block py-2 text-sm font-medium tracking-wide text-rgb(144_224_239)] transition-colors hover:text-white focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 sm:text-base"
+                className="group relative block whitespace-nowrap py-2 text-base font-medium tracking-wide text-[var(--color-ink)] max-[520px]:text-sm"
               >
                 {label}
-                <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-[rgb(144_224_239)] transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-[var(--color-accent)] transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             </li>
           ))}

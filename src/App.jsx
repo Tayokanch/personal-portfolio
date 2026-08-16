@@ -32,7 +32,7 @@ function RouteScrollManager() {
 
 function App() {
   return (
-    <div className="portfolio-shell min-h-screen">
+    <div className="min-h-screen bg-[var(--color-paper)] text-[var(--color-ink)]">
       <Navbar />
       <RouteScrollManager />
       <Suspense fallback={null}>

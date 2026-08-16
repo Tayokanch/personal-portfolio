@@ -28,21 +28,21 @@ function ContactLink({ item }) {
   const Icon = item.icon;
   const content = (
     <>
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-cyan-200/20 bg-cyan-200/10 text-[rgb(144_224_239)] transition group-hover:border-cyan-200/50 group-hover:bg-cyan-200/15">
+      <span className="grid h-11 w-11 shrink-0 place-items-center text-[var(--color-accent)]">
         <Icon aria-hidden="true" className="h-5 w-5" strokeWidth={1.8} />
       </span>
       <span className="min-w-0">
-        <span className="block text-[0.65rem] font-bold uppercase tracking-[0.2em] text-cyan-100/45">
+        <span className="block text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[var(--color-ink-2)]">
           {item.label}
         </span>
-        <span className="mt-1 block truncate text-sm text-slate-100 transition group-hover:text-[rgb(144_224_239)]">
+        <span className="mt-1 block truncate text-sm text-[var(--color-ink-2)] transition group-hover:text-[var(--color-accent)]">
           {item.value}
         </span>
       </span>
     </>
   );
   const className =
-    'group flex min-w-0 items-center gap-3 rounded-2xl border border-white/[0.06] bg-slate-950/45 p-3 transition hover:-translate-y-0.5 hover:border-cyan-200/20';
+    'group flex min-w-0 items-center gap-3 border-b border-[var(--color-rule)] p-3';
 
   return item.href ? (
     <a className={className} href={item.href}>
@@ -55,23 +55,20 @@ function ContactLink({ item }) {
 
 function About() {
   return (
-    <main className="portfolio-about min-h-screen overflow-hidden pt-20">
+    <main className="min-h-screen overflow-hidden bg-[var(--color-paper)] pt-20 text-[var(--color-ink)]">
       <section className="relative isolate">
-        <div className="absolute left-[-12rem] top-24 -z-10 h-96 w-96 rounded-full bg-cyan-400/[0.07] blur-3xl" />
-        <div className="absolute right-[-10rem] top-1/3 -z-10 h-96 w-96 rounded-full bg-blue-500/[0.06] blur-3xl" />
-
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+        <div className="w-full px-[clamp(var(--space-sm),6vw,var(--space-3xl))] pb-[var(--space-4xl)] pt-[var(--space-3xl)]">
+          <div className="grid grid-cols-[minmax(0,1.45fr)_minmax(16rem,.55fr)] items-start gap-14 max-[900px]:grid-cols-1 lg:gap-20">
             <div>
               <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-[rgb(144_224_239)]">
                 <span className="h-px w-10 bg-[rgb(144_224_239)]" />
                 About me
               </p>
-              <h1 className="font-display mt-5 max-w-2xl text-4xl font-semibold tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 max-w-2xl text-[length:clamp(3.5rem,7vw,7rem)] font-semibold leading-[.9] tracking-[-0.035em] text-[var(--color-skill-card-blue)]">
                 Bringing GIS, data and technology together.
               </h1>
 
-              <div className="mt-8 space-y-6 text-base leading-8 text-slate-300">
+              <div className="mt-8 space-y-6 text-base leading-8 text-[var(--color-ink-2)]">
                 <p>
                   I am a Manchester-based GIS professional with a BSc in
                   Geography and Planning and an MSc in Geographic Information
@@ -106,16 +103,14 @@ function About() {
             </div>
 
             <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-              <div className="absolute -inset-4 -z-10 rounded-[2rem] border border-cyan-200/10" />
-              <div className="absolute -bottom-7 -right-7 -z-10 h-40 w-40 rounded-full bg-cyan-300/15 blur-3xl" />
-              <figure className="relative overflow-hidden rounded-[1.75rem] border border-cyan-100/20 bg-slate-900 shadow-[0_30px_90px_rgba(2,6,23,0.6)]">
+              <figure className="relative overflow-hidden">
                 <img
                   src={profileImage}
                   alt="Omotayo Quadri"
-                  className="aspect-[4/5] h-full w-full object-cover object-top"
+                  className="aspect-[4/5] h-full w-full object-cover object-top grayscale"
                 />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent px-6 pb-6 pt-20">
-                  <p className="font-display text-xl font-semibold text-white">
+                <figcaption className="border-t border-[var(--color-rule)] py-[var(--space-sm)]">
+                  <p className="font-display text-xl font-semibold text-[var(--color-ink)]">
                     Omotayo Quadri
                   </p>
                   <p className="mt-1 text-sm text-[rgb(144_224_239)]">
@@ -126,21 +121,21 @@ function About() {
             </div>
           </div>
 
-          <div className="mt-20 rounded-3xl border border-cyan-200/10 bg-slate-900/60 p-5 shadow-2xl shadow-slate-950/40 backdrop-blur-xl sm:p-7">
+          <div className="mt-20 border-t border-[var(--color-rule)] p-5 sm:p-7">
             <div className="mb-6 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.25em] text-[rgb(144_224_239)]">
                   Connect
                 </p>
-                <h2 className="font-display mt-2 text-2xl font-semibold text-white">
+                <h2 className="font-display mt-2 text-2xl font-semibold text-[var(--color-ink)]">
                   Let’s start a conversation.
                 </h2>
               </div>
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-[var(--color-ink-2)]">
                 Open to geospatial opportunities and collaborations.
               </p>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-3 sm:grid-cols-2 max-[520px]:grid-cols-1">
               {contactLinks.map((item) => (
                 <ContactLink item={item} key={item.label} />
               ))}

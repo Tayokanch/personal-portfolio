@@ -1,8 +1,0 @@
-{
-  "date": "2026-08-16",
-  "fontStack": "Manrope Variable + Space Grotesk Variable (replaced by approved Playfair Display + Inter)",
-  "palette": "legacy deep teal and lavender overrides",
-  "motion": "motion-cut",
-  "spacing": "Tailwind default scale",
-  "framework": "React 19 + Vite 8 + Tailwind CSS 4"
-}
