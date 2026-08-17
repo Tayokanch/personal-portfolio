@@ -5,21 +5,20 @@ import profileImage from '../assets/my_image.jpg';
 const contactLinks = [
   {
     label: 'Email',
-    value: 'hello@yourdomain.com',
-    href: 'mailto:hello@yourdomain.com',
+    value: 'quadrimotayo@gmail.com',
     icon: Mail,
   },
   { label: 'Location', value: 'Manchester, United Kingdom', icon: MapPin },
   {
     label: 'LinkedIn',
     value: 'Connect with me',
-    href: 'https://www.linkedin.com/',
+    href: 'https://linkedin.com/in/omotayoqua/',
     icon: FaLinkedinIn,
   },
   {
     label: 'GitHub',
     value: 'Explore my work',
-    href: 'https://github.com/',
+    href: 'https://github.com/Tayokanch',
     icon: FaGithub,
   },
 ];
@@ -45,7 +44,7 @@ function ContactLink({ item }) {
     'group flex min-w-0 items-center gap-3 border-b border-[var(--color-rule)] p-3';
 
   return item.href ? (
-    <a className={className} href={item.href}>
+    <a className={className} href={item.href} target="_blank" rel="noopener noreferrer">
       {content}
     </a>
   ) : (

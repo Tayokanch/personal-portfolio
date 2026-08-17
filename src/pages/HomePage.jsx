@@ -14,14 +14,14 @@ function ContactItem({ item }) {
   const Icon = item.icon;
   const content = <><span className="grid h-10 w-10 shrink-0 place-items-center text-[var(--color-skill-card)] transition group-hover:text-[var(--color-accent)]"><Icon aria-hidden="true" className="h-5 w-5" strokeWidth={1.8} /></span><span className="min-w-0"><span className="block text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[var(--color-ink-2)]">{item.label}</span><span className="mt-0.5 block truncate text-sm text-[var(--color-ink-2)]">{item.value}</span></span></>;
   const className = 'group flex min-h-17 min-w-0 items-center gap-3 border-t border-[var(--color-rule)] px-0 transition hover:bg-[var(--color-paper-2)]';
-  return item.href ? <a className={className} href={item.href}>{content}</a> : <div className={className}>{content}</div>;
+  return item.href ? <a className={className} href={item.href} target="_blank" rel="noopener noreferrer">{content}</a> : <div className={className}>{content}</div>;
 }
 
 function HomePage() {
   return (
     <section id="home" className="relative isolate min-h-svh overflow-hidden bg-cover bg-center pt-20 text-[var(--color-paper)] before:absolute before:inset-0 before:-z-10 before:bg-[color-mix(in_oklch,var(--color-ink)_68%,transparent)] after:absolute after:inset-0 after:-z-20 after:bg-[color-mix(in_oklch,var(--color-skill-card)_18%,transparent)] max-[900px]:before:bg-[color-mix(in_oklch,var(--color-ink)_74%,transparent)]" style={{ backgroundImage: `url(${bannerImage})` }}>
       <div className="grid min-h-[calc(100svh-4.25rem)] w-full grid-cols-[minmax(0,3fr)_minmax(18rem,1fr)] items-end gap-[var(--space-3xl)] px-[clamp(var(--space-sm),4vw,var(--space-xl))] pb-[var(--space-4xl)] pt-[var(--space-3xl)] max-[900px]:grid-cols-1">
-        <div className="relative z-0 max-w-4xl before:pointer-events-none before:absolute before:-inset-y-[var(--space-xl)] before:-left-[var(--space-lg)] before:-right-[var(--space-3xl)] before:-z-10 before:bg-[linear-gradient(90deg,color-mix(in_oklch,var(--color-ink)_76%,transparent),color-mix(in_oklch,var(--color-ink)_42%,transparent)_64%,transparent)]">
+        <div className="relative z-0 max-w-4xl before:pointer-events-none before:absolute before:-inset-y-[var(--space-xl)] before:left-[calc(-1*clamp(var(--space-sm),4vw,var(--space-xl)))] before:-right-[var(--space-3xl)] before:-z-10 before:bg-[linear-gradient(90deg,color-mix(in_oklch,var(--color-ink)_76%,transparent),color-mix(in_oklch,var(--color-ink)_42%,transparent)_64%,transparent)]">
           <div className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.14em] text-[var(--color-accent)]"><span className="h-px w-10 bg-[var(--color-accent)]" />Mapping ideas into impact</div>
           <h1 className="max-w-[8ch] text-[length:var(--text-display)] font-semibold leading-[.82] tracking-[-.055em] text-[var(--color-paper)] max-[520px]:text-[length:clamp(3.5rem,18vw,5rem)]">Hi, I’m <span className="text-[#90E0EF]">Omotayo Quadri.</span></h1>
           <p className="font-display mt-7 max-w-2xl text-xl font-medium leading-relaxed text-[color-mix(in_oklch,var(--color-paper)_78%,var(--color-ink))] sm:text-2xl">GIS Analyst <span className="text-[var(--color-accent)]">|</span> Geospatial Developer <span className="text-[var(--color-accent)]">|</span> Geospatial Engineer</p>
